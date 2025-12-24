@@ -1,0 +1,130 @@
+
+.app {
+  display: flex;
+  height: 100vh;
+  font-family: Arial;
+  transition: 0.3s ease;
+}
+
+.app.dark {
+  background: #1e1f20;
+  color: white;
+}
+
+.app.light {
+  background: #f6f6f6;
+  color: black;
+}
+
+
+.sidebar {
+  width: 240px;
+  padding: 20px;
+  border-right: 1px solid #444;
+}
+
+.new-chat,
+.theme-btn {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.history-item {
+  background: #333;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+
+.chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+
+.msg {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.msg.user {
+  justify-content: flex-end;
+}
+
+.bubble {
+  max-width: 70%;
+  padding: 12px;
+  border-radius: 12px;
+  position: relative;
+  background: #444;
+}
+
+.app.light .bubble {
+  background: #ddd;
+}
+
+.msg.user .bubble {
+  background: #007bff;
+  color: white;
+}
+.typing .dot {
+  height: 8px;
+  width: 8px;
+  background: gray;
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 50%;
+  animation: blink 1s infinite ease-in-out;
+}
+
+@keyframes blink {
+  0% { opacity: 0.2 }
+  50% { opacity: 1 }
+  100% { opacity: 0.2 }
+}
+.copy-btn {
+  background: transparent;
+  border: none;
+  color: #aaa;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.input-box {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #444;
+}
+
+.input-box textarea {
+  flex: 1;
+  resize: none;
+  max-height: 200px;
+  padding: 10px;
+  border: none;
+  background: #2a2b2d;
+  color: white;
+}
+
+.app.light .input-box textarea {
+  background: #fafafa;
+  color: black;
+}
+
+.send {
+  width: 50px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-left: 10px;
+  cursor: pointer;
+}
